@@ -1,0 +1,46 @@
+Model: Boing
+Country: Hayastan
+Year: 1903
+Hours: 14.0
+Military: false
+Weight: 10000
+Wingspan: 10
+Top speed: 1000
+Seats: 98
+Cost: 445.8
+
+Model: Boing
+Country: Hayastan
+
+Newer plane: Babken
+
+Bigger wingspan: Babken
+
+Country with smallest seats: Rusastan
+
+Not military planes:
+Plane{model='Boing', country='Hayastan', year=1903, hourse=14.0, military=false, weight=10000, wingspan=10, topSpeed=1000, seats=98, cost=445.8}
+Plane{model='Arman', country='Rusastan', year=2005, hourse=0.0, military=false, weight=0, wingspan=15, topSpeed=2414, seats=47, cost=150.0}
+
+Model: Boing
+Country: Hayastan
+Year: 1903
+Hours: 14.0
+Military: false
+Weight: 10000
+Wingspan: 10
+Top speed: 1000
+Seats: 98
+Cost: 445.8
+
+Model: Boing
+Country: Hayastan
+
+Newer plane: Babken
+Bigger wingspan: Babken
+Country with smallest seats: Rusastan
+
+Not military planes:
+Plane{model='Boing', country='Hayastan', year=1903, hourse=14.0, military=false, weight=10000, wingspan=10, topSpeed=1000, seats=98, cost=445.8}
+Plane{model='Arman', country='Rusastan', year=2005, hourse=0.0, military=false, weight=0, wingspan=15, topSpeed=2414, seats=47, cost=150.0}
+

@@ -1,16 +1,18 @@
+
 package model;
 
 public class Plane {
+
     private String model;
     private String country;
-  private int year;
-  private double hourse;
-  private boolean military;
-  private int weight;
-  private int wingspan;
-  private int topSpeed;
-  private int seats;
-  private double cost;
+    private int year;
+    private double hourse;
+    private boolean military;
+    private int weight;
+    private int wingspan;
+    private int topSpeed;
+    private int seats;
+    private double cost;
 
     public String getModel() {
         return model;
@@ -92,4 +94,19 @@ public class Plane {
         this.cost = cost;
     }
 
+    @Override
+    public String toString() {
+        return "Plane{" +
+                "model='" + model + '\'' +
+                ", country='" + country + '\'' +
+                ", year=" + year +
+                ", hourse=" + hourse +
+                ", military=" + military +
+                ", weight=" + weight +
+                ", wingspan=" + wingspan +
+                ", topSpeed=" + topSpeed +
+                ", seats=" + seats +
+                ", cost=" + cost +
+                '}';
+    }
 }

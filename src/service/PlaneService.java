@@ -1,28 +1,35 @@
+
 package service;
+
 import model.Plane;
 
 public class PlaneService {
 
-    public void Task1(Plane plane1){
-        System.out.println(plane1.getModel());
-        System.out.println(plane1.getCountry());
-        System.out.println(plane1.getYear());
-        System.out.println(plane1.getHourse());
-        System.out.println(plane1.isMilitary());
-        System.out.println(plane1.getWeight());
-        System.out.println(plane1.getWingspan());
-        System.out.println(plane1.getTopSpeed());
-        System.out.println(plane1.getSeats());;
-        System.out.println(plane1.getCost());
+    // Task 1
+    public void Task1(Plane plane1) throws Exception {
+        FileService.writeFile("output.txt",
+                "Model: " + plane1.getModel() + "\n" +
+                        "Country: " + plane1.getCountry() + "\n" +
+                        "Year: " + plane1.getYear() + "\n" +
+                        "Hours: " + plane1.getHourse() + "\n" +
+                        "Military: " + plane1.isMilitary() + "\n" +
+                        "Weight: " + plane1.getWeight() + "\n" +
+                        "Wingspan: " + plane1.getWingspan() + "\n" +
+                        "Top speed: " + plane1.getTopSpeed() + "\n" +
+                        "Seats: " + plane1.getSeats() + "\n" +
+                        "Cost: " + plane1.getCost() + "\n\n");
+    }
 
+    // Task 2
+    public void Task2(Plane plane1) throws Exception {
+        if (plane1.isMilitary()) {
+            FileService.writeFile("output.txt", "Cost + Top speed: " + (plane1.getCost() + plane1.getTopSpeed()) + "\n");
+        } else {
+            FileService.writeFile("output.txt", "Model: " + plane1.getModel() + "\n" + "Country: " + plane1.getCountry() + "\n");
+        }
     }
-    public void Task2(Plane plane1){
-       if(plane1.isMilitary()){
-            System.out.println(plane1.getCost() + plane1.getTopSpeed());
-        }else{
-           System.out.println(plane1.getModel() + plane1.getCountry());
-       }
-    }
+
+    // Task 3
     public Plane Task3(Plane plane1, Plane plane2) {
         if (plane1.getYear() >= plane2.getYear()) {
             return plane1;
@@ -30,6 +37,8 @@ public class PlaneService {
             return plane2;
         }
     }
+
+    // Task 4
     public String Task4(Plane plane1, Plane plane2) {
         if (plane1.getWingspan() > plane2.getWingspan()) {
             return plane1.getModel();
@@ -37,21 +46,33 @@ public class PlaneService {
             return plane2.getModel();
         }
     }
-    public void Task5(Plane plane1, Plane plane2, Plane plane3) {
+
+    // Task 5
+    public void Task5(Plane plane1, Plane plane2, Plane plane3)
+            throws Exception {
         Plane x = plane1;
+
         if (plane2.getSeats() < x.getSeats()) {
             x = plane2;
         }
+
         if (plane3.getSeats() < x.getSeats()) {
             x = plane3;
         }
-        System.out.println("Country: " + x.getCountry());
+
+        FileService.writeFile("output.txt", "Country with smallest seats: " + x.getCountry() + "\n");
     }
 
-    public  void Task6(Plane[] planes){
-        for (int i = 0 ; i < planes.length; i++ )
-            if (!planes[i].isMilitary()){
-                System.out.println(planes[i]);
+    // Task 6
+    public void Task6(Plane[] planes) throws Exception {
+        FileService.writeFile("output.txt", "Not military planes:\n");
+
+        for (int i = 0; i < planes.length; i++) {
+            if (!planes[i].isMilitary()) {
+                FileService.writeFile("output.txt", planes[i].toString() + "\n");
             }
+        }
+
+        FileService.writeFile("output.txt", "\n");
     }
 }
